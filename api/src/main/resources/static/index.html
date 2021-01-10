@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="Xlch">
+<title>随机图片API</title>
+<link rel="" href="">
+<meta name="keywords" content="二次元图片API,动漫图片API">
+<meta name="description" content="随机图片API">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<!--看板娘依赖-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<style>
+	pre{color: #2196F3;
+			font-size: 18px;
+			font-family: 微软雅黑;
+			background: rgba(255, 255, 255, 0.55)}
+		</style>
+<style type="text/css">.json_note{color: #004CFF;font-weight:bold;}.json_key{ color: #92278f;font-weight:bold;}.json_null{color: #f1592a;font-weight:bold;}.json_string{ color: #3ab54a;font-weight:bold;}.json_number{ color: #25aae2;font-weight:bold;}.json_link{ color: #717171;font-weight:bold;}.json_array_brackets{}</style>
+</head>
+<!--每30秒刷新一次页面 <meta http-equiv="refresh" content="30">-->
+<!--缓存时间-->
+<meta http-equiv="Cache-Control" content="max-age=7200" />
+<body style="background: font-family: 微软雅黑;">
+<!--图片背景暂定-->
+<!--   <body style="background: url(https://api.xingw.top/api) no-repeat center center;font-family: 微软雅黑;">         -->
+<!--Acg轮播背景-->
+	<style>
+		html,
+		body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div id="dynamic-background" style="width: 100%; height: 100%; position: fixed;z-index: -1;">
+		<script>
+			window.addEventListener("load", function(e){
+				document.getElementById("dynamic-background").innerHTML = '<iframe src="/html/acgPic.html" width="100%" height="100%" style="border: 0;"></iframe>';
+	        	});
+		</script>
+	</div>
+<!--Acg轮播背景-->
+<div style="position: absolute;height: 54px;width: 100%;background: rgba(255,255,255,0.6);border-bottom: solid white 2px;">
+<div>
+<b style="position: absolute;top: -23px;left: 10px;">
+<p style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;color: #00B6FF;font-size: 46px;position: relative;top: 9px;left: 0px;">樱</p>
+</b>
+<p style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;font-size: 39px;color: #00CEFF;position: absolute;top: 3px;left: 61px;">花</p>
+<p style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;font-size: 24px;color: #F100FF;position: absolute;top: 18px;left: 143px;">API - 随机图片API</p>
+</div>
+</div>
+<div class="container" style="position: relative;top: 90px;margin: 0 auto;">
+<div class="well" style="background: rgba(255, 255, 255, 0.58);text-shadow: #000 1px 1px 1px;color: #00F1FF;font-size: 20px;">
+<p>图片API基本调用格式：</p>javascript:;
+<pre><a href="https://api.xingw.top/img/test" target="_blank">https://api.xingw.top/img/test</a>（测试图片）<br>
+<a href="https://api.xingw.top/img/acg" target="_blank">https://api.xingw.top/img/acg</a>（动漫）<br>
+</pre>
+<p>文字API基本调用格式：</p>
+<pre><a href="https://api.xingw.top/yan/yiyan" target="_blank">https://api.xingw.top/yan/yiyan</a>（一言语录）<br><br><a href="https://api.xingw.top/yan/tgrj" target="_blank">https://api.xingw.top/yan/tgrj</a>（舔狗日记）</pre>
+<p>参数：</p>
+<pre>type=json</pre>
+<p>JSON调用格式</p>
+<pre>图片列：<a href="https://api.xingw.top/api?return=json" target="_blank">https://api.xingw.top/api?return=json</a></pre>
+<pre>文字列：<a href="https://api.xingw.top/yan/yiyan/?code=js" target="_blank">https://api.xingw.top/yiyan?code=js</a></pre>
+<p>JSON数据</p>
+<pre style="text-shadow: initial;"><span>{<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json_key">"code"</span>:<span class="json_string">"200"</span><span class="json_note"> #图片状态码</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json_key">"acgurl"</span>:<span class="json_string">"https:\/\/ws1.sinaimg.cn\/large\/0072Vf1pgy1foxkjcneg1j31kw0w0hbs.jpg"</span><span class="json_note"> #图片地址</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json_key">"width"</span>:<span class="json_string">"2048"</span><span class="json_note"> #图片宽</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="json_key">"height"</span>:<span class="json_string">"1152"</span><span class="json_note"> #图片高</span><br>}</span></pre>
+</div>
+</div>
+<div style="position: fixed;height: 30px;width: 100%;bottom: 0px;background: rgba(255,255,255,0.6);border-top: solid white 2px;text-align: center;font-size: 20px;color: #2196F3;text-shadow: #000 1px 1px 1px;">
+Copyright © 2020
+<a href="https://www.xingw.top/" target="_blank">博客</a>
+<a href="https://www.xingw.top/index.php/lab/" target="_blank">实验室</a>
+<a target="_blank" href="https://www.beian.miit.gov.cn/">豫ICP备20005305号</a>
+</div>
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/wsqstar/ResHosting@0.031/build/js/Sakura.js"></script>
+<!--看板娘 <script src="https://api.xingw.top/live2d/live2d-api/live2d_load_own/autoload.js"></script>-->
+<!--  https://cdn.jsdelivr.net/gh/Fog-Forest/cdn@2.1.5.5/Sakura/live2d/autoload.js-->
+<script src="https://cdn.jsdelivr.net/gh/Fog-Forest/cdn@2.1.5.5/Sakura/live2d/autoload.js"></script>
+</body>
+</html>
